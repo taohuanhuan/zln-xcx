@@ -133,10 +133,11 @@
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				showRegion: false,
+        import { getProfileOptions, getProfileInfo, saveProfileInfo } from '@/config/api'
+        export default {
+                data() {
+                        return {
+                                showRegion: false,
 				showIncome: false,
 				useRadioForMarital: true,
 				incomeOptions: ['<5k', '5-10k', '10-20k', '20k+'],
@@ -160,9 +161,13 @@
 					addPoints: [],
 					cannotAccept: []
 				}
-			};
-		},
-		methods: {
+                                };
+                },
+                created() {
+                        this.loadOptions();
+                        this.loadInfo();
+                },
+                methods: {
 			onRegionConfirm(e) {
 				const {
 					province,
@@ -205,15 +210,42 @@
 			removeCannot(i) {
 				this.form.cannotAccept.splice(i, 1);
 			},
-			submit() {
-				console.log('表单数据：', this.form);
-				uni.showToast({
-					title: '提交成功',
-					icon: 'success'
-				});
-			}
-		}
-	};
+                        async loadOptions() {
+                                try {
+                                        const res = await getProfileOptions()
+                                        this.incomeOptions = res.data.incomeOptions
+                                        this.hobbyOptions = res.data.hobbyOptions
+                                        this.lifestyleOptions = res.data.lifestyleOptions
+                                } catch (e) {
+                                        console.log('load options fail', e)
+                                }
+                        },
+                        async loadInfo() {
+                                try {
+                                        const res = await getProfileInfo()
+                                        if (res.data) {
+                                                Object.assign(this.form, res.data)
+                                        }
+                                } catch (e) {
+                                        console.log('load info fail', e)
+                                }
+                        },
+                        async submit() {
+                                try {
+                                        await saveProfileInfo(this.form)
+                                        uni.showToast({
+                                                title: '提交成功',
+                                                icon: 'success'
+                                        })
+                                } catch (e) {
+                                        uni.showToast({
+                                                title: e.msg || '提交失败',
+                                                icon: 'none'
+                                        })
+                                }
+                        }
+                }
+        };
 </script>
 
 <style scoped>
