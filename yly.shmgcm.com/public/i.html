@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Update Check</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* 通用布局 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .status {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* 输入框和按钮样式 */
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* 结果展示 */
+        #result {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        #result p {
+            font-size: 1.2em;
+            color: #34495e;
+        }
+
+        #result span {
+            font-weight: bold;
+        }
+
+        /* 弹窗通知样式 */
+        #notification {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #2ecc71;
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Update Check</h1>
+        <div id="status" class="status">Checking for updates...</div>
+
+        <!-- 计算收益功能 -->
+        <h2>计算收益和收益率</h2>
+        <div>
+            <label for="buyPrice">买入价: </label>
+            <input type="number" id="buyPrice" placeholder="请输入买入价" />
+        </div>
+        <div>
+            <label for="sellPrice">卖出价: </label>
+            <input type="number" id="sellPrice" placeholder="请输入卖出价" />
+        </div>
+        <div>
+            <button onclick="calculateProfit()">计算收益</button>
+        </div>
+        
+        <div id="result">
+            <p>收益: <span id="profit">0.00</span> 元</p>
+            <p>收益率: <span id="profitRate">0.00</span> %</p>
+        </div>
+
+        <h2>计算卖出价格</h2>
+        <div>
+            <label for="rate">利率: </label>
+            <input type="number" id="rate" placeholder="请输入利率 (%)" />
+        </div>
+        <div>
+            <button onclick="calculateSellPrice()">计算卖出价</button>
+        </div>
+
+        <div id="sellPriceResult">
+            <p>收益钱数: <span id="calculatedProfit">0.00</span> 元</p>
+            <p>卖出价: <span id="calculatedSellPrice">0.00</span> 元</p>
+        </div>
+
+        <div id="notification">数据已更新！点击查看详情。</div>
+
+        <script>
+            // 每 30 秒检查一次数据更新
+            setInterval(function() {
+                $.ajax({
+                    url: 'https://yly.shmgcm.com/api/index/testapi',  // PHP 后端接口
+                    type: 'GET',
+                    success: function(response) {
+                        if (response.data.has_update) {
+                            // 数据更新了，显示通知
+                            $('#status').text('New data available!');
+
+                            // 获取返回的通知信息
+                            const noticeId = response.data.notice_id;
+                            const itemUrl = response.data.item_url;
+                            const title = response.data.title;
+
+                            // 显示弹窗通知
+                            $('#notification').fadeIn().delay(5000).fadeOut(); // 弹窗出现并5秒后消失
+
+                            // 触发浏览器通知
+                            if ("Notification" in window) {
+                                if (Notification.permission === "granted") {
+                                    const notification = new Notification("Data Update", {
+                                        body: title,
+                                        icon: "https://example.com/icon.png"
+                                    });
+
+                                    // 设置通知点击事件，点击后跳转到新页面
+                                    notification.onclick = function() {
+                                        window.open(itemUrl, '_blank');  // 在新页面打开链接
+                                    };
+
+                                    // 设置通知的显示时间：例如 10 秒
+                                    setTimeout(function() {
+                                        notification.close();
+                                    }, 10000);
+                                } else if (Notification.permission !== "denied") {
+                                    Notification.requestPermission().then(function(permission) {
+                                        if (permission === "granted") {
+                                            const notification = new Notification("Data Update", {
+                                                body: title,
+                                                icon: "https://example.com/icon.png"
+                                            });
+
+                                            // 设置通知点击事件，点击后跳转到新页面
+                                            notification.onclick = function() {
+                                                window.open(itemUrl, '_blank');  // 在新页面打开链接
+                                            };
+
+                                            // 设置通知的显示时间：例如 10 秒
+                                            setTimeout(function() {
+                                                notification.close();
+                                            }, 10000);
+                                        }
+                                    });
+                                }
+                            }
+                        } else {
+                            $('#status').text('No new updates.');
+                        }
+                    },
+                    error: function() {
+                        $('#status').text('Error checking for updates.');
+                    }
+                });
+            }, 30000);  // 每 30 秒请求一次
+
+            // 计算收益和收益率
+            function calculateProfit() {
+                var buyPrice = parseFloat($('#buyPrice').val());  // 买入价
+                var sellPrice = parseFloat($('#sellPrice').val());  // 卖出价
+
+                if (isNaN(buyPrice) || isNaN(sellPrice)) {
+                    alert("请输入有效的买入价和卖出价！");
+                    return;
+                }
+
+                // 计算手续费
+                var fee = 0.045;  // 手续费 4.5%
+                var profit = sellPrice - buyPrice - (sellPrice * fee);  // 收益 = 卖出价 - 买入价 - 手续费
+                var profitRate = (profit / buyPrice) * 100;  // 收益率 = 收益 / 买入价 * 100
+
+                // 显示结果
+                $('#profit').text(profit.toFixed(2));  // 保留两位小数
+                $('#profitRate').text(profitRate.toFixed(2));  // 保留两位小数
+            }
+
+            // 计算卖出价格（包含手续费）
+            function calculateSellPrice() {
+                var buyPrice = parseFloat($('#buyPrice').val());  // 买入价
+                var rate = parseFloat($('#rate').val()) / 100;  // 利率，转为小数
+
+                if (isNaN(buyPrice) || isNaN(rate)) {
+                    alert("请输入有效的买入价和利率！");
+                    return;
+                }
+
+                // 计算卖出价（包含手续费）
+                var fee = 0.045;  // 手续费 4.5%
+                var sellPrice = buyPrice * (1 + rate);  // 卖出价 = 买入价 × (1 + 利率)
+                var profit = sellPrice - buyPrice; // 计算收益钱数
+                sellPrice = sellPrice * (1 + fee);  // 加上手续费
+
+                // 显示收益钱数和卖出价
+                $('#calculatedProfit').text(profit.toFixed(2));  // 保留两位小数
+                $('#calculatedSellPrice').text(sellPrice.toFixed(2));  // 保留两位小数
+            }
+        </script>
+    </div>
+</body>
+</html>
