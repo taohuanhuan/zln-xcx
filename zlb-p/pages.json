@@ -1,510 +1,74 @@
 {
-	"pages": [{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "今日服药提醒"
-			}
-		},
-		{
-			"path": "pages/platform_intro/platform_intro",
-			"style": {
-				"navigationBarTitleText": "了解平台"
-			}
-		},
-		{
-			"path": "pages/messages/messages",
-			"style": {
-				"navigationBarTitleText": "消息"
-			}
-		},
-		{
-			"path": "pages/my/my",
-			"style": {
-				"navigationBarTitleText": "我的",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/platform_intro/teacher_list",
-			"style": {
-				"navigationBarTitleText": "师资介绍列表"
-			}
-		},
-	
-		{
-			"path": "pages/platform_intro/popular_courses",
-			"style": {
-				"navigationBarTitleText": "热门课程"
-			}
-		},
-		{
-			"path": "pages/my/common_questions",
-			"style": {
-				"navigationBarTitleText": "常见问题"
-			}
-		},
-		{
-			"path": "pages/my/common_questions_details",
-			"style": {
-				"navigationBarTitleText": "常见问题详情"
-			}
-		},
-
-		{
-			"path": "pages/purchase/single_purchase",
-			"style": {
-				"navigationBarTitleText": "单独购买"
-			}
-		},
-		{
-			"path": "pages/purchase/single_purchase_complete",
-			"style": {
-				"navigationBarTitleText": "单独购买-完成"
-			}
-		},
-		{
-			"path": "pages/purchase/single_purchase_payment",
-			"style": {
-				"navigationBarTitleText": "单独购买-支付"
-			}
-		},
-		{
-			"path": "pages/supervision/supervision_settings",
-			"style": {
-				"navigationBarTitleText": "督导设置"
-			}
-		},
-		{
-			"path": "pages/supervision/supervisor_details",
-			"style": {
-				"navigationBarTitleText": "督导师详情"
-			}
-		},
-		{
-			"path": "pages/supervision/supervision_appointment_list",
-			"style": {
-				"navigationBarTitleText": "督导预约"
-			}
-		},
-		{
-			"path": "pages/supervision/consultation_center",
-			"style": {
-				"navigationBarTitleText": "圆融萨提亚心理咨询中心"
-			}
-		},
-		{
-			"path": "pages/supervision/consultant_details",
-			"style": {
-				"navigationBarTitleText": "咨询师详情"
-			}
-		},
-		{
-			"path": "pages/supervision/service_process",
-			"style": {
-				"navigationBarTitleText": "服务流程"
-			}
-		},
-		{
-			"path": "pages/supervision/expertise",
-			"style": {
-				"navigationBarTitleText": "擅长方向"
-			}
-		},
-		{
-			"path": "pages/index/search_result",
-			"style": {
-				"navigationBarTitleText": "搜索结果"
-			}
-		},
-		
-		{
-			"path": "pages/yaoqing/index",
-			"style": {
-				"navigationBarTitleText": "邀请好友"
-			}
-		},
-		{
-			"path": "pages/yaoqing/fenxiaoshang",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		},
-		{
-			"path": "pages/yaoqing/haoyou",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		},
-		{
-			"path": "pages/yaoqing/mingxi",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		},
-		{
-			"path": "pages/yaoqing/tixian",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		},
-		{
-			"path": "pages/yaoqing/changjianwenti",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		},
-		{
-			"path": "pages/yaoqing/tousu",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		},
-		{
-			"path": "pages/yaoqing/guanyuwomen",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		},
-		{
-			"path": "pages/yaoqing/miaosha",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		},
-		{
-			"path": "pages/my/jifen",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		},
-		{
-			"path": "pages/my/yigouhuodong",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		},
-		{
-			"path": "pages/my/youhuixiangqing",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		},
-		{
-			"path": "pages/index/daoshiruzhu",
-			"style": {
-				"navigationBarTitleText": "咨询师入驻"
-			}
-		},
-
-		{
-			"path": "pages/my/gerenxinxi",
-			"style": {
-				"navigationBarTitleText": "个人信息"
-			}
-		},
-		{
-			"path": "pages/my/jiaren",
-			"style": {
-				"navigationBarTitleText": "家人"
-			}
-		},
-		{
-			"path": "pages/my/jiarentianjia",
-			"style": {
-				"navigationBarTitleText": "新增家人"
-			}
-		},
-		{
-			"path": "pages/my/youhuiquan",
-			"style": {
-				"navigationBarTitleText": "我的优惠券"
-			}
-		},
-		{
-			"path": "pages/my/youhuiquan_xiangqing",
-			"style": {
-				"navigationBarTitleText": "优惠券详情"
-			}
-		},
-		{
-			"path": "pages/my/shiyongjilu",
-			"style": {
-				"navigationBarTitleText": "使用记录"
-			}
-		},
-		{
-			"path": "pages/my/pingjia",
-			"style": {
-				"navigationBarTitleText": "评价"
-			}
-		},
-		{
-			"path" : "pages/my/age",
-			"style" : 
-			{
-				"navigationBarTitleText" : "年龄"
-			}
-		},
-		{
-			"path" : "pages/ruzhu/shenqingruzhu",
-			"style" : 
-			{
-				"navigationBarTitleText" : "申请入驻"
-			}
-		},
-		{
-			"path" : "pages/ruzhu/laifangxinxi",
-			"style" : 
-			{
-				"navigationBarTitleText" : ""
-			}
-		},
-		
-		{
-			"path" : "pages/index/add_record",
-			"style" : 
-			{
-				"navigationBarTitleText" : ""
-			}
-		},
-		{
-			"path" : "pages/platform_intro/flipcard",
-			"style" : 
-			{
-				"navigationBarTitleText" : ""
-			}
-		},
-		{
-			"path" : "pages/period/period",
-			"style" : 
-			{
-				"navigationBarTitleText" : "经期记录"
-			}
-		}
-	],
-	"subPackages": [{
-		"root": "guanlishi",
-		"pages": [{
-				"path": "login/login",
-				"style": {
-					"navigationBarTitleText": "",
-					"navigationStyle": "custom"
-				}
-			},
-			{
-				"path": "index/index",
-				"style": {
-					"navigationBarTitleText": "首页",
-					"navigationStyle": "custom"
-				}
-			},
-
-			{
-				"path": "order/order",
-				"style": {
-					"navigationBarTitleText": "订单",
-					"navigationStyle": "custom"
-				}
-			},
-			{
-				"path": "message/message",
-				"style": {
-					"navigationBarTitleText": "消息",
-					"navigationStyle": "custom"
-				}
-			},
-			{
-				"path": "mine/mine",
-				"style": {
-					"navigationBarTitleText": "",
-					"navigationStyle": "custom"
-				}
-			},
-			{
-				"path": "order/detail_online",
-				"style": {
-					"navigationBarTitleText": "订单详情"
-				}
-			},
-			{
-				"path": "order/order_finish",
-				"style": {
-					"navigationBarTitleText": "订单详情"
-				}
-			},
-			{
-				"path": "user/dangan_form",
-				"style": {
-					"navigationBarTitleText": "用户档案"
-				}
-			},
-			{
-				"path": "user/zixun_user",
-				"style": {
-					"navigationBarTitleText": "咨询用户管理"
-				}
-			},
-			{
-				"path": "user/user_add",
-				"style": {
-					"navigationBarTitleText": "新建用户信息"
-				}
-			},
-			{
-				"path": "user/user_info",
-				"style": {
-					"navigationBarTitleText": "用户信息"
-				}
-			},
-			{
-				"path": "user/jiuzhen_form",
-				"style": {
-					"navigationBarTitleText": "更新就诊记录"
-				}
-			},
-			{
-				"path": "user/jiuzhen_xiangqing",
-				"style": {
-					"navigationBarTitleText": "就诊记录详情"
-				}
-			},
-			{
-				"path": "user/yuyue",
-				"style": {
-					"navigationBarTitleText": "预约下次咨询"
-				}
-			},
-			{
-				"path": "user/info",
-				"style": {
-					"navigationBarTitleText": "个人信息"
-				}
-			},
-			{
-				"path": "user/tags",
-				"style": {
-					"navigationBarTitleText": "个人标签"
-				}
-			},
-			{
-				"path": "user/gerenjianjie",
-				"style": {
-					"navigationBarTitleText": "个人简介"
-				}
-			},
-			{
-				"path": "user/zhengshu",
-				"style": {
-					"navigationBarTitleText": "证书"
-				}
-			},
-			{
-				"path": "user/zixunshijian",
-				"style": {
-					"navigationBarTitleText": "咨询时间"
-				}
-			},
-			{
-				"path": "mine/changjianwenti",
-				"style": {
-					"navigationBarTitleText": "常见问题"
-				}
-			},
-			{
-				"path": "mine/wentixiangqing",
-				"style": {
-					"navigationBarTitleText": "常见问题"
-				}
-			},
-			{
-				"path": "user/dudaojilu",
-				"style": {
-					"navigationBarTitleText": "督导记录"
-				}
-			},
-			{
-				"path": "user/xinzengdudao",
-				"style": {
-					"navigationBarTitleText": "新增督导记录"
-				}
-			},
-			{
-				"path": "order/shiyongjilu",
-				"style": {
-					"navigationBarTitleText": "就诊记录"
-				}
-			},
-			{
-				"path": "wentixiangqing",
-				"style": {
-					"navigationBarTitleText": ""
-				}
-			},
-			{
-				"path" : "user/nicheng",
-				"style" : 
-				{
-					"navigationBarTitleText" : "昵称"
-				}
-			},
-			{
-				"path" : "user/xingming",
-				"style" : 
-				{
-					"navigationBarTitleText" : "姓名"
-				}
-			},
-			{
-				"path" : "user/yuyue_user",
-				"style" : 
-				{
-					"navigationBarTitleText" : "选择用户"
-				}
-			}
-		]
-	}],
-	"tabBar": {
-		"color": "#999999",
-		"selectedColor": "#BB4FE1",
-		"borderStyle": "black",
-		"backgroundColor": "#ffffff",
-		"position": "bottom",
-		"list": [{
-				"pagePath": "pages/index/index",
-				"iconPath": "static/img/i1.png",
-				"selectedIconPath": "static/img/ii1.png",
-				"text": "用药提醒"
-			},
-			{
-				"pagePath": "pages/platform_intro/platform_intro",
-				"iconPath": "static/img/i2.png",
-				"selectedIconPath": "static/img/ii2.png",
-				"text": "记忆小游戏"
-			},
-			{
-				"pagePath": "pages/messages/messages",
-				"iconPath": "static/img/i3.png",
-				"selectedIconPath": "static/img/ii3.png",
-				"text": "单身表单"
-			},{
-				"pagePath": "pages/period/period",
-				"iconPath": "static/img/i3.png",
-				"selectedIconPath": "static/img/ii3.png",
-				"text": "经期记录"
-			}
-			// {
-			// 	"pagePath": "pages/my/my",
-			// 	"iconPath": "static/img/i4.png",
-			// 	"selectedIconPath": "static/img/ii4.png",
-			// 	"text": "我的"
-			// }
-		]
-	},
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "圆融萨提亚心理",
-		"navigationBarBackgroundColor": "#ffffff",
-		"backgroundColor": "#ffffff"
-	},
-	"uniIdRouter": {}
+    "pages": [
+        {
+            "path": "pages/index/index",
+            "style": {
+                "navigationBarTitleText": "今日服药提醒"
+            }
+        },
+        {
+            "path": "pages/platform_intro/platform_intro",
+            "style": {
+                "navigationBarTitleText": "了解平台"
+            }
+        },
+        {
+            "path": "pages/messages/messages",
+            "style": {
+                "navigationBarTitleText": "消息"
+            }
+        },
+        {
+            "path": "pages/period/period",
+            "style": {
+                "navigationBarTitleText": "经期记录"
+            }
+        },
+        {
+            "path": "pages/index/add_record",
+            "style": {
+                "navigationBarTitleText": ""
+            }
+        }
+    ],
+    "tabBar": {
+        "color": "#999999",
+        "selectedColor": "#BB4FE1",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "position": "bottom",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "static/img/i1.png",
+                "selectedIconPath": "static/img/ii1.png",
+                "text": "用药提醒"
+            },
+            {
+                "pagePath": "pages/platform_intro/platform_intro",
+                "iconPath": "static/img/i2.png",
+                "selectedIconPath": "static/img/ii2.png",
+                "text": "记忆小游戏"
+            },
+            {
+                "pagePath": "pages/messages/messages",
+                "iconPath": "static/img/i3.png",
+                "selectedIconPath": "static/img/ii3.png",
+                "text": "单身表单"
+            },
+            {
+                "pagePath": "pages/period/period",
+                "iconPath": "static/img/i3.png",
+                "selectedIconPath": "static/img/ii3.png",
+                "text": "经期记录"
+            }
+        ]
+    },
+    "globalStyle": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "圆融萨提亚心理",
+        "navigationBarBackgroundColor": "#ffffff",
+        "backgroundColor": "#ffffff"
+    },
+    "uniIdRouter": {}
 }
