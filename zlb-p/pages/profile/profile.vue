@@ -42,6 +42,7 @@ export default {
         console.log('load user fail', e)
       }
     },
+
     async loadBadges() {
       try {
         const res = await getMyBadges()

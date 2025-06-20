@@ -22,5 +22,5 @@ export const saveProfileInfo = params => http.post('messages/save', params)
 export const getBadgeList = () => http.get('badge/list')
 export const getMyBadges = () => http.get('badge/my')
 export const claimBadge = params => http.post('badge/claim', params)
-
 export const getUserInfo = () => http.get('user/info')
+

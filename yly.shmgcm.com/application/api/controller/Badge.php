@@ -53,7 +53,9 @@ class Badge extends Api
                 Db::rollback();
                 return json(['code'=>0,'msg'=>'已领取该徽章','data'=>null]);
             }
+
             $getTime = $timeStr ? date('Y-m-d H:i:s', intval($timeStr) / 1000) : date('Y-m-d H:i:s');
+
             Db::table('yly_user_badge', false)->insert([
                 'user_id'   => $userId,
                 'badge_id'  => $badgeId,
