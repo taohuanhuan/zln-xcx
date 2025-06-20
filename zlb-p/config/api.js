@@ -18,7 +18,7 @@ export const getProfileOptions = () => http.get('messages/options')
 export const getProfileInfo = () => http.get('messages/info')
 export const saveProfileInfo = params => http.post('messages/save', params)
 
-// 徽章相关
 export const getBadgeList = () => http.get('badge/list')
 export const getMyBadges = () => http.get('badge/my')
 export const claimBadge = params => http.post('badge/claim', params)
+
