@@ -1,6 +1,9 @@
 <template>
-	<view class="container">
-		<!-- 标题：显示用户名和今日用药提醒 -->
+        <view class="container">
+                <view class="profile-btn" @click="goProfile">
+                        <u-icon name="account-fill" size="28" color="#BB4FE1" />
+                </view>
+                <!-- 标题：显示用户名和今日用药提醒 -->
 
 		<view v-if="reminders.length > 0">
 			<view class="header-title">{{ userName }} 今日用药提醒</view>
@@ -162,11 +165,16 @@
 			},
 
 			// 跳转到添加记录页面
-			openAdd() {
-				uni.navigateTo({
-					url: '/pages/index/add_record'
-				});
-			},
+                        openAdd() {
+                                uni.navigateTo({
+                                        url: '/pages/index/add_record'
+                                });
+                        },
+                        goProfile() {
+                                uni.navigateTo({
+                                        url: '/pages/profile/profile'
+                                })
+                        },
 			// 确认已服药
 			async confirm(item) {
 				// 调用 reminderMark 接口，将这条提醒标记为“已服药”
@@ -293,16 +301,22 @@
 	}
 
 	/* 添加按钮 */
-	.add-btn {
-		position: fixed;
-		right: 30rpx;
-		bottom: 30rpx;
-		width: 80rpx;
-		height: 80rpx;
-		background-color: #BB4FE1;
-		border-radius: 40rpx;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+        .add-btn {
+                position: fixed;
+                right: 30rpx;
+                bottom: 30rpx;
+                width: 80rpx;
+                height: 80rpx;
+                background-color: #BB4FE1;
+                border-radius: 40rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+
+        .profile-btn {
+                position: fixed;
+                top: 20rpx;
+                right: 20rpx;
+        }
 </style>

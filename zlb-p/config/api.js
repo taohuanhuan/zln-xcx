@@ -17,3 +17,8 @@ export const MenstrualList = params => http.post('Menstrual/list', params)
 export const getProfileOptions = () => http.get('messages/options')
 export const getProfileInfo = () => http.get('messages/info')
 export const saveProfileInfo = params => http.post('messages/save', params)
+
+export const getBadgeList = () => http.get('badge/list')
+export const getMyBadges = () => http.get('badge/my')
+export const claimBadge = params => http.post('badge/claim', params)
+

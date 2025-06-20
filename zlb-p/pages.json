@@ -29,6 +29,18 @@
             "style": {
                 "navigationBarTitleText": ""
             }
+        },
+        {
+            "path": "pages/profile/profile",
+            "style": {
+                "navigationBarTitleText": "个人中心"
+            }
+        },
+        {
+            "path": "pages/badges/badges",
+            "style": {
+                "navigationBarTitleText": "徽章列表"
+            }
         }
     ],
     "tabBar": {
