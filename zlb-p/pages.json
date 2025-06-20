@@ -1,86 +1,86 @@
 {
-    "pages": [
-        {
-            "path": "pages/index/index",
-            "style": {
-                "navigationBarTitleText": "今日服药提醒"
-            }
-        },
-        {
-            "path": "pages/platform_intro/platform_intro",
-            "style": {
-                "navigationBarTitleText": "了解平台"
-            }
-        },
-        {
-            "path": "pages/messages/messages",
-            "style": {
-                "navigationBarTitleText": "消息"
-            }
-        },
-        {
-            "path": "pages/period/period",
-            "style": {
-                "navigationBarTitleText": "经期记录"
-            }
-        },
-        {
-            "path": "pages/index/add_record",
-            "style": {
-                "navigationBarTitleText": ""
-            }
-        },
-        {
-            "path": "pages/profile/profile",
-            "style": {
-                "navigationBarTitleText": "个人中心"
-            }
-        },
-        {
-            "path": "pages/badges/badges",
-            "style": {
-                "navigationBarTitleText": "徽章列表"
-            }
-        }
-    ],
-    "tabBar": {
-        "color": "#999999",
-        "selectedColor": "#BB4FE1",
-        "borderStyle": "black",
-        "backgroundColor": "#ffffff",
-        "position": "bottom",
-        "list": [
-            {
-                "pagePath": "pages/index/index",
-                "iconPath": "static/img/i1.png",
-                "selectedIconPath": "static/img/ii1.png",
-                "text": "用药提醒"
-            },
-            {
-                "pagePath": "pages/platform_intro/platform_intro",
-                "iconPath": "static/img/i2.png",
-                "selectedIconPath": "static/img/ii2.png",
-                "text": "记忆小游戏"
-            },
-            {
-                "pagePath": "pages/messages/messages",
-                "iconPath": "static/img/i3.png",
-                "selectedIconPath": "static/img/ii3.png",
-                "text": "单身表单"
-            },
-            {
-                "pagePath": "pages/period/period",
-                "iconPath": "static/img/i3.png",
-                "selectedIconPath": "static/img/ii3.png",
-                "text": "经期记录"
-            }
-        ]
-    },
-    "globalStyle": {
-        "navigationBarTextStyle": "black",
-        "navigationBarTitleText": "圆融萨提亚心理",
-        "navigationBarBackgroundColor": "#ffffff",
-        "backgroundColor": "#ffffff"
-    },
-    "uniIdRouter": {}
+	"pages": [
+
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "今日服药提醒"
+			}
+		},
+		{
+			"path": "pages/platform_intro/platform_intro",
+			"style": {
+				"navigationBarTitleText": "了解平台"
+			}
+		},
+		{
+			"path": "pages/messages/messages",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"path": "pages/period/period",
+			"style": {
+				"navigationBarTitleText": "经期记录"
+			}
+		},
+		{
+			"path": "pages/index/add_record",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/profile/profile",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		}, {
+			"path": "pages/badges/badges",
+			"style": {
+				"navigationBarTitleText": "徽章列表"
+			}
+		}
+
+	],
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#BB4FE1",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"position": "bottom",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/img/i1.png",
+				"selectedIconPath": "static/img/ii1.png",
+				"text": "用药提醒"
+			},
+			{
+				"pagePath": "pages/platform_intro/platform_intro",
+				"iconPath": "static/img/i2.png",
+				"selectedIconPath": "static/img/ii2.png",
+				"text": "记忆小游戏"
+			},
+			{
+				"pagePath": "pages/messages/messages",
+				"iconPath": "static/img/i3.png",
+				"selectedIconPath": "static/img/ii3.png",
+				"text": "单身表单"
+			},
+			{
+				"pagePath": "pages/badges/badges",
+				"iconPath": "static/img/i3.png",
+				"selectedIconPath": "static/img/ii3.png",
+				"text": "经期记录"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "圆融萨提亚心理",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#ffffff"
+	},
+	"uniIdRouter": {}
 }
