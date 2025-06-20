@@ -1,0 +1,22 @@
+CREATE TABLE `yly_user_profile` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `user_id` int unsigned NOT NULL COMMENT '用户ID',
+  `nickname` varchar(50) DEFAULT '' COMMENT '昵称',
+  `id_card` varchar(32) DEFAULT '' COMMENT '身份证号',
+  `wechat` varchar(50) DEFAULT '' COMMENT '微信号',
+  `region_label` varchar(255) DEFAULT '' COMMENT '所在区域',
+  `region_code` varchar(50) DEFAULT '' COMMENT '区域代码',
+  `marital_status` varchar(20) DEFAULT '' COMMENT '婚姻状态',
+  `has_child` varchar(20) DEFAULT '' COMMENT '是否有小孩',
+  `income_range` varchar(20) DEFAULT '' COMMENT '收入区间',
+  `has_car` varchar(20) DEFAULT '' COMMENT '有车情况',
+  `has_house` varchar(20) DEFAULT '' COMMENT '有房情况',
+  `hobbies` text COMMENT '兴趣爱好',
+  `lifestyle` text COMMENT '生活方式',
+  `add_points` text COMMENT '加分项',
+  `cannot_accept` text COMMENT '绝不能接受',
+  `createtime` datetime DEFAULT NULL,
+  `updatetime` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uid` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
