@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { getMyBadges } from '@/config/api'
+import { getMyBadges, getUserInfo } from '@/config/api'
 export default {
   data() {
     return {
@@ -30,11 +30,19 @@ export default {
     }
   },
   onShow() {
-    const info = uni.getStorageSync('userinfo') || {}
-    this.user = info.user || {}
+    this.loadUser()
     this.loadBadges()
   },
   methods: {
+    async loadUser() {
+      try {
+        const res = await getUserInfo()
+        this.user = res.data || {}
+      } catch (e) {
+        console.log('load user fail', e)
+      }
+    },
+
     async loadBadges() {
       try {
         const res = await getMyBadges()

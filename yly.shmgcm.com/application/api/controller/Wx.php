@@ -66,6 +66,7 @@ class Wx extends Api
                         'id'       => $user->id,
                         'nickname' => $user->nickname,
                         'avatar'   => $user->avatar,
+                        'openid'   => $user->openid,
                     ],
                 ],
             ]);

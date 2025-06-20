@@ -149,6 +149,22 @@ class User extends Api
         $this->success(__('Logout successful'));
     }
 
+    // 获取当前用户基础信息
+    public function info()
+    {
+        $user = $this->auth->getUser();
+        if (!$user) {
+            return json(['code' => 0, 'msg' => '未登录', 'data' => null]);
+        }
+        $data = [
+            'id'       => $user->id,
+            'nickname' => $user->nickname,
+            'avatar'   => $user->avatar,
+            'openid'   => $user->openid,
+        ];
+        return json(['code' => 1, 'msg' => 'ok', 'data' => $data]);
+    }
+
     /**
      * 修改会员个人信息
      *
