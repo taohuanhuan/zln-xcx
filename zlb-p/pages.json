@@ -37,14 +37,68 @@
 				"navigationBarTitleText": "个人中心"
 			}
 		}, {
-			"path": "pages/badges/badges",
-			"style": {
-				"navigationBarTitleText": "徽章列表"
-			}
-		}
+                "path": "pages/badges/badges",
+                        "style": {
+                                "navigationBarTitleText": "徽章列表"
+                        }
+                },
 
-	],
-	"tabBar": {
+                {
+                        "path": "pages/user/home/home",
+                        "style": {
+                                "navigationBarTitleText": ""
+                        }
+                },
+                {
+                        "path": "pages/user/search/search",
+                        "style": {
+                                "navigationBarTitleText": ""
+                        }
+                },
+                {
+                        "path": "pages/user/search/result",
+                        "style": {
+                                "navigationBarTitleText": ""
+                        }
+                },
+                {
+                        "path": "pages/order/index",
+                        "style": {
+                                "navigationBarTitleText": ""
+                        }
+                },
+                {
+                        "path": "pages/order/detail",
+                        "style": {
+                                "navigationBarTitleText": ""
+                        }
+                },
+                {
+                        "path": "pages/user/setting",
+                        "style": {
+                                "navigationBarTitleText": ""
+                        }
+                },
+                {
+                        "path": "pages/user/personal",
+                        "style": {
+                                "navigationBarTitleText": ""
+                        }
+                },
+                {
+                        "path": "pages/user/account",
+                        "style": {
+                                "navigationBarTitleText": ""
+                        }
+                },
+                {
+                        "path": "pages/user/payPwd",
+                        "style": {
+                                "navigationBarTitleText": ""
+                        }
+                }
+        ],
+        "tabBar": {
 		"color": "#999999",
 		"selectedColor": "#BB4FE1",
 		"borderStyle": "black",
